@@ -11,3 +11,9 @@ Executar o comando “docker pull redis” no Docker
 
 3- Executar última versão:
 Executar o comando “docker run -d -p 6379:6379 redis:latest” no Docker
+
+OU
+
+Manual para instalação direta no Windows:
+https://medium.com/@programadriano/instalando-o-redis-em-um-servidor-windows-server-2016-bb2c3cb0a806
+
