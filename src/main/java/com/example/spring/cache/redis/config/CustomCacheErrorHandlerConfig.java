@@ -6,7 +6,8 @@ import org.springframework.cache.interceptor.CacheErrorHandler;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class CustomCacheErrorHandlerConfig implements CacheErrorHandler {@Override
+public class CustomCacheErrorHandlerConfig implements CacheErrorHandler {
+	@Override
 	public void handleCacheGetError(RuntimeException exception, Cache cache, Object key) {
 		System.out.printf(exception.getMessage());
 	}

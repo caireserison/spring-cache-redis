@@ -8,10 +8,11 @@ public class ExampleService {
 	
 	@Cacheable(value = "${cache.key}")
 	public String testCache(String name) throws InterruptedException {
-		
+
+		// Note que no console vai aparecer essa mensagem somente na primeira chamada com o mesmo parâmetro
 		System.out.printf("without cache!");
-		
-		// don't do this at home!!!
+
+		// Note que somente a primeira chamada demora, com parâmetros iguais
 		Thread.currentThread().sleep(3000l);
 		
 		return name;

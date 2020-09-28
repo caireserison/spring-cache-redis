@@ -28,6 +28,7 @@ public class RedisConfig implements CachingConfigurer {
 		return null;
 	}
 
+	// Configuração criada para que, em caso de erro do Redis, a aplicação apenas grave o log e continue normalmente
 	@Override
 	public CacheErrorHandler errorHandler() {
 		return new CustomCacheErrorHandlerConfig();
