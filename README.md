@@ -23,9 +23,9 @@ Refletir nome: <br />
 URI: http://localhost:8082/test-cache/name/Erison <br/>
 METHOD: GET
 
-Calcular idade:
-URI: http://localhost:8082/test-cache
-METHOD: POST
+Calcular idade: <br/>
+URI: http://localhost:8082/test-cache <br/>
+METHOD: POST <br/>
 REQUEST: <br/>
 ```json
 {
