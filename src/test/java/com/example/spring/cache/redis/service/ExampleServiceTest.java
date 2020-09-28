@@ -13,17 +13,25 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class ExampleServiceTest {
 
-    @Mock
+    // Testes utilizando o próprio Redis
+
+    @Autowired
     ExampleService exampleService;
 
     @Test
     public void testCache() throws InterruptedException {
-        Mockito
-                .when(exampleService.testCache(Mockito.anyString()))
-                .thenReturn("Erison");
-
         String response = exampleService.testCache("Erison");
 
         Assertions.assertThat(response).isEqualTo("Erison");
+    }
+
+    @Test
+    public void testCacheTwoTimes() throws InterruptedException {
+        // Teste utilizando o próprio Redis
+
+        String response = exampleService.testCache("Erison");
+        String responseTwo = exampleService.testCache("Erison");
+
+        Assertions.assertThat(response).isEqualTo(responseTwo);
     }
 }
