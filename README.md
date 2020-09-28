@@ -14,6 +14,23 @@ Executar o comando “docker run -d -p 6379:6379 redis:latest” no Docker
 
 OU
 
-Manual para instalação direta no Windows:
+Manual para instalação direta no Windows: <br />
 https://medium.com/@programadriano/instalando-o-redis-em-um-servidor-windows-server-2016-bb2c3cb0a806
 
+TESTES
+
+Refletir nome: <br />
+URI: http://localhost:8082/test-cache/name/Erison <br/>
+METHOD: GET
+
+Calcular idade:
+URI: http://localhost:8082/test-cache
+METHOD: POST
+REQUEST: <br/>
+```json
+{
+    "id": 1,
+    "name": "Erison",
+    "dateBirth": "1992-06-10"
+}
+```
