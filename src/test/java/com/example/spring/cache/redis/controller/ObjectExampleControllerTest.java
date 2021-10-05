@@ -1,7 +1,7 @@
 package com.example.spring.cache.redis.controller;
 
 import com.example.spring.cache.redis.entity.ObjectExample;
-import com.example.spring.cache.redis.service.ComplexObjectExampleService;
+import com.example.spring.cache.redis.service.ObjectExampleService;
 import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,14 +17,14 @@ import java.time.LocalDate;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class ComplexObjectExampleTest {
+public class ObjectExampleControllerTest {
     private static final String SUCCESS_MESSAGE = "Erison is 30 years old.";
 
     @Autowired
     TestRestTemplate restTemplate;
 
     @MockBean
-    ComplexObjectExampleService complexObjectExampleService;
+    ObjectExampleService complexObjectExampleService;
 
     ObjectExample objectExample;
 
