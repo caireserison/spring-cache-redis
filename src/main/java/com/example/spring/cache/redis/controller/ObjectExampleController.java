@@ -1,25 +1,23 @@
 package com.example.spring.cache.redis.controller;
 
 import com.example.spring.cache.redis.entity.ObjectExample;
-import com.example.spring.cache.redis.service.ComplexObjectExampleService;
+import com.example.spring.cache.redis.service.ObjectExampleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.awt.*;
-
 @RestController
-public class ComplexObjectExampleController {
+public class ObjectExampleController {
 
     @Autowired
-    ComplexObjectExampleService complexObjectExampleService;
+    ObjectExampleService objectExampleService;
 
     @PostMapping(path = "/test-cache", produces = MediaType.APPLICATION_JSON_VALUE)
     public String testObject(@RequestBody ObjectExample request) {
         try {
-            return complexObjectExampleService.getAge(request);
+            return objectExampleService.getAge(request);
         } catch (InterruptedException e) {
             return e.getMessage();
         }
